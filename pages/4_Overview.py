@@ -80,6 +80,9 @@ def load_data():
 
 df=load_data()
 
+if 'df' not in st.session_state:
+    st.session_state.df = load_data()
+
 # - - - - SIDEBAR - - - -
 
 st.sidebar.header('Filters:')
